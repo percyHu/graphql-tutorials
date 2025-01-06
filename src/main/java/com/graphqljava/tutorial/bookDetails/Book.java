@@ -11,6 +11,10 @@ record Book(String id, String name, int pageCount, String authorId) {
         new Book("book-3", "Interview with the vampire", 371, "author-3")
     );
 
+    public static List<Book> getAll() {
+        return books;
+    }
+
     public static Book getById(String id) {
         return books.stream().filter(book -> book.id().equals(id)).findFirst().orElse(null);
     }

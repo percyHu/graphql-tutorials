@@ -1,4 +1,5 @@
 type Query {
+    bookAll: [Book]
     bookById(id: ID): Book
 }
 
